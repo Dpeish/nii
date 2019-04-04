@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<swiper
+  class="container"
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  indicator-active-color="rgba(255, 255, 255, 1)"
+>
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 菜单 -->
+
+<swiper
+  class="icons"
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{iconautoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  indicator-active-color="#00bcd4"
+>
+  <block wx:for="{{iconpages}}" wx:for-index="index" wx:key="index">
+    <swiper-item>
+      <block wx:for="{{iconpages[index]}}" wx:for-item="cell" wx:key="key">
+        <view class='icon-item'>
+          <view class="icon-img">
+            <image src="{{cell.imgUrl}}" class="icon-img-content" />
+          </view>
+          <text class='icon-desc'>{{cell.desc}}</text>
+        </view>
+      </block>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 热门推荐 -->
+<hotlist list="{{recommendList}}"></hotlist>
+
+
+<view class='item-title'>
+  周末去哪儿
+</view>
+
+<block wx:for="{{ weekendList }}" wx:key="index">
+  <view class='weekend-item'>
+    <view class='weekend-item-img'>
+      <image src='{{ item.imgUrl }}'></image>
+    </view>
+    <view class='weekend-item-content'>
+      <view class='week-title text-hidden'>{{ item.title }}</view>
+      <view class='week-desc text-hidden'>{{ item.desc }}</view>
+    </view>
+  </view>
+</block>

@@ -1,0 +1,25 @@
+<!--pages/index/components/hotrec/hotrec.wxml-->
+<view class='item-title'>
+  热门推荐
+</view>
+<view class='hot-item-content'>
+  <block wx:for="{{ list }}" wx:for-item="item" wx:key="index">
+    <view class='hot-item' bindtap='handleTap' data-hotid="{{ item.id }}">
+      <view class='hot-img'>
+        <image class='hot-imgs' src='{{ item.imgUrl }}'></image>
+      </view>
+      <view class='hot-item-cell'>
+        <view class='hot-title text-hidden'>
+          <text>{{ item.title }}</text>
+        </view>
+        <view class='hot-desc'>
+          <text>{{ item.desc }}</text>
+        </view>
+        <view class='hot-desc'>
+          <text class='text-em'>￥{{ item.price }}</text> 元
+          <text class='fr'>{{ item.area }}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

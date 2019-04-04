@@ -1,0 +1,63 @@
+<!--pages/details/details.wxml-->
+<swiper
+  class="container"
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  indicator-active-color="rgba(255, 255, 255, 1)"
+>
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 简单介绍 -->
+<view class='baseinfo'>
+  <view class='baseinfo-item baseinfo-right'>
+    <view class='grade'>
+      <text class='grade-em'>5.0</text>分  超赞
+    </view>
+    <view class='grade-num'>
+      1633条评论
+    </view>
+  </view>
+  <view class='baseinfo-item'>
+    <view class='dispark'>
+      开放时间
+    </view>
+    <view class='dispark-time'>
+      07:00 - 20:00
+    </view>
+  </view>
+</view>
+
+<view class='address'>
+  <view class='address-icon'>
+    <text class="iconfont icon-dizhi"></text>
+  </view>
+  <view class='address-info'>
+    <text class='address-desc'>福建省厦门思明区环岛东路3009号香山国际游艇码头(建发国际大厦、国际会议中心酒店)</text>
+  </view>
+</view>
+
+<view class='item-view'>
+  <view class='item-title'>
+    <view class='item-label'></view>
+    特色玩法
+  </view>
+  <view class='feature'>
+    <view class='feature-info'>
+      <text>海通联游艇管理有限公司是一家专业从事游艇、帆船、快艇、摩托艇租赁、代管、维护保养、船艇信息咨询服务的企业。公司开辟多条常规出海路线也可随客户定制航线、游艇派对等节目，体验帆船航海的激情与魅力！乘坐帆船出海，将烦恼、疲倦和困惑统统抖落在容纳百川的大海里，抖落在帆船后面那道长长的白浪里。美丽迷人的五缘湾景，海天一色的蓝色天堂，升帆、拉帆亲身体验水上运动的激情与魅力。航线经过白海豚保护区，如果您足够幸运还可一睹白海豚的身影。航线：香山游艇会——土屿——厦金海峡——小金门——大金门——香山游艇码头。全程约70分钟。</text>
+    </view>
+    <view class='feature-img'>
+      <image src='http://img1.qunarzz.com/sight/p0/1510/89/89896b3c3bccf429.img.jpg_710x420_1b4c98f0.jpg'></image>
+    </view>
+    <view class='feature-img'>
+      <image src='http://img1.qunarzz.com/sight/p0/1510/c2/c2ba766cac28708a.img.jpg_710x420_c9fd6124.jpg'></image>
+    </view>
+  </view>
+</view>
+

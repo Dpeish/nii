@@ -1,0 +1,114 @@
+<!--pages/mine/mine.wxml-->
+<view class='heade'>
+  
+  <view class='header' wx:if="{{!hasUserInfo && canIUse}}">
+    <button class='header-btn'  open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+    <view class='header-img-area'>
+      <image class='header-img' src='https://source.qunarzz.com/usercenter/touch/avatar.png'></image>
+    </view>
+    <view class='header-info'>
+      登陆
+    </view>
+  </view>
+
+  <view class='header' wx:else>
+    <view class='header-img-area'>
+      <image class='header-img' src='{{ userInfo.avatarUrl }}'></image>
+    </view>
+    <view class='header-info'>
+      {{userInfo.nickName}}
+    </view>
+  </view>
+</view>
+
+<view class='wallet'>
+  <view class='wallet-icon'>
+    <text class="iconfont icon-qianbao"></text>
+  </view>
+  我的钱包
+</view>
+
+<view class='money-item'>
+  <view class='money-item-cell'>
+    <view class='money-title text-hidden'>{{ wallet.money }}</view>
+    <view class='money-func'>账户余额</view>
+  </view>
+  <view class='money-item-cell'>
+    <view class='money-title text-hidden'>{{ wallet.star }}</view>
+    <view class='money-func'>星券</view>
+  </view>
+  <view class='money-item-cell'>
+    <view class='money-title text-hidden'>{{ wallet.card }} <text class='text-samll'>张</text></view>
+    <view class='money-func'>银行卡</view>
+  </view>
+</view>
+
+<!-- 菜单 -->
+
+<view class='menu-container'>
+  <view class='menu-item'>
+    <view class='menu-item-icon icon-order'>
+      <text class="iconfont icon-dingdan"></text>
+    </view>
+    我的订单
+    <view class='icon-arrow'>
+      <text class="iconfont icon-arrow-down-new"></text>
+    </view>
+    <view class='menu-boreder-bot'></view>
+  </view>
+
+  <view class='menu-item'>
+    <view class='menu-item-icon icon-tuikuan'>
+      <text class="iconfont icon-shouhoutuikuan"></text>
+    </view>
+    我的退款
+    <view class='icon-arrow'>
+      <text class="iconfont icon-arrow-down-new"></text>
+    </view>
+    <view class='menu-boreder-bot'></view>
+  </view>
+
+  <view class='menu-item'>
+    <view class='menu-item-icon icon-fapiaos'>
+      <text class="iconfont icon-fapiao"></text>
+    </view>
+    我的发票
+    <view class='icon-arrow'>
+      <text class="iconfont icon-arrow-down-new"></text>
+    </view>
+    <view class='menu-boreder-bot'></view>
+  </view>
+
+  <view class='menu-item'>
+    <view class='menu-item-icon icon-gonglues'>
+      <text class="iconfont icon-gonglue"></text>
+    </view>
+    我的攻略
+    <view class='icon-arrow'>
+      <text class="iconfont icon-arrow-down-new"></text>
+    </view>
+  </view>
+</view>
+
+<view class='menu-container'>
+  <view class='menu-item'>
+    <view class='menu-item-icon icon-fankuis'>
+      <text class="iconfont icon-fankui"></text>
+    </view>
+    意见反馈
+    <view class='icon-arrow'>
+      <text class="iconfont icon-arrow-down-new"></text>
+    </view>
+    <view class='menu-boreder-bot'></view>
+  </view>
+
+  <view class='menu-item'>
+    <view class='menu-item-icon icon-guanyus'>
+      <text class="iconfont icon-guanyu"></text>
+    </view>
+    关于
+    <view class='icon-arrow'>
+      <text class="iconfont icon-arrow-down-new"></text>
+    </view>
+  </view>
+</view>
